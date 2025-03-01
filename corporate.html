@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=5Dp7ya"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=5Dp7ya" type="text/css">
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=hXUwGU"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=hXUwGU" type="text/css">
 
   
   
@@ -26,15 +26,17 @@
 </head>
 <body>
   
-  <nav class="navbar cid-uE6Unno6id" id="menu06-yCr2GO4f5o-2q" data-rv-view="2320">
+  <nav class="navbar cid-uEa4Vwiv04" id="menu06-yCr2GO4f5o-3c" data-rv-view="111">
     <div class="brand">
         <a href="index.html">FocusLabFilms</a>
     </div>
-    <button class="menu-toggle">☰</button>
+
+    <!-- Mobile Menu Toggle (CSS-Only Compatible) -->
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
     <ul class="nav-menu">
-        <li class="nav-item">
-            <a href="index.html" class="nav-link">Home</a>
-        </li>
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
         <li class="nav-item">
             <a href="page1.html" class="nav-link">Frames</a>
             <ul class="dropdown-menu">
@@ -45,52 +47,57 @@
                 <li><a href="travel.html" class="dropdown-item">Travel</a></li>
             </ul>
         </li>
-        <li class="nav-item">
-            <a href="projects.html" class="nav-link">Projects</a>
-        </li>
-        <li class="nav-item">
-            <a href="contact.html" class="nav-link">Contact</a>
-        </li>
+        <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
-</nav><style class="cid-uE6Unno6id" id="menu06-yCr2GO4f5o-2q" data-rv-view="2320">
+</nav><style class="cid-uEa4Vwiv04" id="menu06-yCr2GO4f5o-3c" data-rv-view="111">
+/* Reset and Layout */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
+/* Navbar Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.1rem 1rem;
-    height: 50px;
+    padding: 0.1rem 2rem;
+    height: 60px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     position: fixed;
     width: 100%;
     top: 0;
-    transition: top 0.3s;
     z-index: 1000;
 }
 
-.brand {
-    position: relative;
-    left: 0%;
-    transform: translateY(-70%); /* Perfect centering */
-    display: flex;
-    align-items: center;
-}
+/* Brand Styling */
 
 .brand a {
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
     color: #333;
+    align-items: center;
+
 }
 
+/* Hide checkbox */
+.menu-checkbox {
+    display: none;
+}
+
+/* Styling for the Menu Icon (Mobile Menu Button) */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Navigation Menu */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -114,13 +121,14 @@
     transform: scale(1.1);
 }
 
+/* Dropdown Styling */
 .dropdown-menu {
     position: absolute;
     top: 100%;
     left: 0;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    min-width: 160px;
+    min-width: 180px;
     display: none;
     list-style: none;
     padding: 0.5rem 0;
@@ -139,33 +147,29 @@
     font-size: 0.9rem;
 }
 
-.menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
+/* Mobile Styles */
 @media (max-width: 768px) {
-    .menu-toggle {
+    /* Show Menu Icon */
+    .menu-icon {
         display: block;
     }
 
+    /* Hide Main Menu by Default */
     .nav-menu {
         position: fixed;
-        top: 70px;
-        right: -100%;
+        top: 60px;
+        left: -100%;
         flex-direction: column;
         background-color: #fff;
         width: 100%;
-        height: calc(100vh - 70px);
-        transition: right 0.3s;
+        height: calc(100vh - 60px);
+        transition: left 0.3s ease-in-out;
         box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
-    .nav-menu.active {
-        right: 0;
+    /* Show menu when checkbox is checked */
+    .menu-checkbox:checked + .menu-icon + .nav-menu {
+        left: 0;
     }
 
     .nav-item {
@@ -180,11 +184,11 @@
         padding-left: 1rem;
     }
 }
-</style><div class="content cid-uE6Unno6id" id="menu06-yCr2GO4f5o-2q" data-rv-view="2320">
+</style><div class="content cid-uEa4Vwiv04" id="menu06-yCr2GO4f5o-3c" data-rv-view="111">
     <p style="visibility: hidden;">This text is hidden but still takes up space.</p>
 </div>
 
-<section data-bs-version="5.1" class="gallery1 mbr-gallery cid-uE6V0hgAjn" id="gallery01-2r">
+<section data-bs-version="5.1" class="gallery1 mbr-gallery cid-uEa4YcBlHi" id="gallery01-3d">
     
     
 
@@ -200,8 +204,8 @@
         
         <div class="row mbr-gallery">
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uE6VS7GqVP-modal" data-bs-target="#uE6VS7GqVP-modal">
-                    <img class="w-100" src="assets/images/1000090166-01-1.jpg-598x360.jpg" alt="Mobirise Website Builder" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP">
+                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uEa5nAWyVG-modal" data-bs-target="#uEa5nAWyVG-modal">
+                    <img class="w-100" src="assets/images/1000090166-01-1.jpg-598x360.jpg" alt="Mobirise Website Builder" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG">
                     <div class="icon-wrapper">
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
@@ -209,8 +213,8 @@
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uE6VS7GqVP-modal" data-bs-target="#uE6VS7GqVP-modal">
-                    <img class="w-100" src="assets/images/mg-0949.jpg-598x399.jpeg" alt="Mobirise Website Builder" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP">
+                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uEa5nAWyVG-modal" data-bs-target="#uEa5nAWyVG-modal">
+                    <img class="w-100" src="assets/images/mg-0949.jpg-598x399.jpeg" alt="Mobirise Website Builder" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG">
                     <div class="icon-wrapper">
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
@@ -218,8 +222,8 @@
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uE6VS7GqVP-modal" data-bs-target="#uE6VS7GqVP-modal">
-                    <img class="w-100" src="assets/images/20231112-203758-01.jpeg-598x449.jpeg" alt="Mobirise Website Builder" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP">
+                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uEa5nAWyVG-modal" data-bs-target="#uEa5nAWyVG-modal">
+                    <img class="w-100" src="assets/images/20231112-203758-01.jpeg-598x449.jpeg" alt="Mobirise Website Builder" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG">
                     <div class="icon-wrapper">
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
@@ -227,8 +231,8 @@
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uE6VS7GqVP-modal" data-bs-target="#uE6VS7GqVP-modal">
-                    <img class="w-100" src="assets/images/20231216-182504-01.jpeg-598x449.jpeg" alt="Mobirise Website Builder" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP">
+                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uEa5nAWyVG-modal" data-bs-target="#uEa5nAWyVG-modal">
+                    <img class="w-100" src="assets/images/20231216-182504-01.jpeg-598x449.jpeg" alt="Mobirise Website Builder" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG">
                     <div class="icon-wrapper">
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
@@ -236,8 +240,8 @@
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uE6VS7GqVP-modal" data-bs-target="#uE6VS7GqVP-modal">
-                    <img class="w-100" src="assets/images/1000082729-01.jpeg-598x399.jpeg" alt="Mobirise Website Builder" data-slide-to="4" data-bs-slide-to="4" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP">
+                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uEa5nAWyVG-modal" data-bs-target="#uEa5nAWyVG-modal">
+                    <img class="w-100" src="assets/images/1000082729-01.jpeg-598x399.jpeg" alt="Mobirise Website Builder" data-slide-to="4" data-bs-slide-to="4" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG">
                     <div class="icon-wrapper">
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
@@ -245,8 +249,8 @@
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uE6VS7GqVP-modal" data-bs-target="#uE6VS7GqVP-modal">
-                    <img class="w-100" src="assets/images/1000137919.jpg-598x598.jpeg" alt="Mobirise Website Builder" data-slide-to="5" data-bs-slide-to="5" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP">
+                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uEa5nAWyVG-modal" data-bs-target="#uEa5nAWyVG-modal">
+                    <img class="w-100" src="assets/images/1000137919.jpg-598x598.jpeg" alt="Mobirise Website Builder" data-slide-to="5" data-bs-slide-to="5" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG">
                     <div class="icon-wrapper">
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
@@ -254,8 +258,8 @@
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uE6VS7GqVP-modal" data-bs-target="#uE6VS7GqVP-modal">
-                    <img class="w-100" src="assets/images/onepls.001-012.jpeg-598x566.jpeg" alt="Mobirise Website Builder" data-slide-to="6" data-bs-slide-to="6" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP">
+                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uEa5nAWyVG-modal" data-bs-target="#uEa5nAWyVG-modal">
+                    <img class="w-100" src="assets/images/onepls.001-012.jpeg-598x566.jpeg" alt="Mobirise Website Builder" data-slide-to="6" data-bs-slide-to="6" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG">
                     <div class="icon-wrapper">
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
@@ -263,8 +267,8 @@
                 
             </div>
             <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uE6VS7GqVP-modal" data-bs-target="#uE6VS7GqVP-modal">
-                    <img class="w-100" src="assets/images/20220612115321-img-7038-01.jpeg-598x399.jpeg" alt="Mobirise Website Builder" data-slide-to="7" data-bs-slide-to="7" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP">
+                <div class="item-wrapper mb-3" data-toggle="modal" data-bs-toggle="modal" data-target="#uEa5nAWyVG-modal" data-bs-target="#uEa5nAWyVG-modal">
+                    <img class="w-100" src="assets/images/20220612115321-img-7038-01.jpeg-598x399.jpeg" alt="Mobirise Website Builder" data-slide-to="7" data-bs-slide-to="7" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG">
                     <div class="icon-wrapper">
                         <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
                     </div>
@@ -273,11 +277,11 @@
             </div>
         </div>
 
-        <div class="modal mbr-slider" tabindex="-1" role="dialog" aria-hidden="true" id="uE6VS7GqVP-modal">
+        <div class="modal mbr-slider" tabindex="-1" role="dialog" aria-hidden="true" id="uEa5nAWyVG-modal">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <div class="carousel slide" data-pause="false" data-bs-pause="false" id="lb-uE6VS7GqVP" data-interval="5000" data-bs-interval="5000">
+                        <div class="carousel slide" data-pause="false" data-bs-pause="false" id="lb-uEa5nAWyVG" data-interval="5000" data-bs-interval="5000">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img class="d-block w-100" src="assets/images/1000090166-01-1.jpg-598x360.jpg" alt="Mobirise Website Builder">
@@ -305,28 +309,45 @@
                                 </div>
                             </div>
                             <ol class="carousel-indicators">
-                                <li data-slide-to="0" data-bs-slide-to="0" class="active" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP"></li>
-                                <li data-slide-to="1" data-bs-slide-to="1" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP"></li>
-                                <li data-slide-to="2" data-bs-slide-to="2" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP"></li>
-                                <li data-slide-to="3" data-bs-slide-to="3" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP"></li>
-                                <li data-slide-to="4" data-bs-slide-to="4" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP"></li>
-                                <li data-slide-to="5" data-bs-slide-to="5" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP"></li>
-                                <li data-slide-to="6" data-bs-slide-to="6" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP"></li>
-                                <li data-slide-to="7" data-bs-slide-to="7" data-target="#lb-uE6VS7GqVP" data-bs-target="#lb-uE6VS7GqVP"></li>
+                                <li data-slide-to="0" data-bs-slide-to="0" class="active" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG"></li>
+                                <li data-slide-to="1" data-bs-slide-to="1" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG"></li>
+                                <li data-slide-to="2" data-bs-slide-to="2" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG"></li>
+                                <li data-slide-to="3" data-bs-slide-to="3" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG"></li>
+                                <li data-slide-to="4" data-bs-slide-to="4" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG"></li>
+                                <li data-slide-to="5" data-bs-slide-to="5" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG"></li>
+                                <li data-slide-to="6" data-bs-slide-to="6" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG"></li>
+                                <li data-slide-to="7" data-bs-slide-to="7" data-target="#lb-uEa5nAWyVG" data-bs-target="#lb-uEa5nAWyVG"></li>
                             </ol>
                             <a role="button" href="" class="close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close">
                             </a>
-                            <a class="carousel-control-prev carousel-control" role="button" data-slide="prev" data-bs-slide="prev" href="#lb-uE6VS7GqVP">
+                            <a class="carousel-control-prev carousel-control" role="button" data-slide="prev" data-bs-slide="prev" href="#lb-uEa5nAWyVG">
                                 <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
                                 <span class="sr-only visually-hidden">Previous</span>
                             </a>
-                            <a class="carousel-control-next carousel-control" role="button" data-slide="next" data-bs-slide="next" href="#lb-uE6VS7GqVP">
+                            <a class="carousel-control-next carousel-control" role="button" data-slide="next" data-bs-slide="next" href="#lb-uEa5nAWyVG">
                                 <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
                                 <span class="sr-only visually-hidden">Next</span>
                             </a>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="footer4 cid-uEa58WyEff" once="footers" id="footer04-3f">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="col-12">
+                <p class="mbr-text mb-0 mbr-fonts-style display-7">
+                    © Copyright 2025 FOCUSLAB FILMS - All Rights Reserved
+                </p>
             </div>
         </div>
     </div>
