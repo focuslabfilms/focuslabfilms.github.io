@@ -795,6 +795,9 @@ a {
   position: absolute;
   top: 0;
 }
+.cid-uNyZTC9OUl .mbr-section-subtitle DIV {
+  text-align: center;
+}
 .cid-uNte5Nv1l9 {
   display: flex;
   padding-top: 20rem;
@@ -1714,6 +1717,46 @@ a {
   color: black !important;
   border-color: #ffc091 !important;
 }
+.cid-uNUVhGTWZY {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  background-color: #edefeb;
+}
+.cid-uNUVhGTWZY .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-uNUVhGTWZY .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.cid-uNUVhGTWZY .mbr-section-subtitle DIV {
+  text-align: center;
+}
+.cid-uNUVWFQgJe {
+  padding-top: 0rem;
+  padding-bottom: 3rem;
+  background-color: #ffffff;
+}
+.cid-uNUVWFQgJe .mbr-fallback-image.disabled {
+  display: none;
+}
+.cid-uNUVWFQgJe .mbr-fallback-image {
+  display: block;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.cid-uNUVWFQgJe .mbr-section-subtitle DIV {
+  text-align: center;
+}
 .cid-uNyjyEsCzx {
   padding-top: 8rem;
   padding-bottom: 10rem;
@@ -1981,7 +2024,7 @@ a {
   opacity: 1;
 }
 .cid-uNyjyEsCzx .modal-content {
-  border-radius: 10;
+  border-radius: 10rem;
   border: none;
   background: transparent;
 }
@@ -2052,9 +2095,6 @@ a {
 .cid-uNyjyEsCzx .carousel-item,
 .cid-uNyjyEsCzx .modal-dialog {
   transition: all 0.2s ease;
-}
-.cid-uNyjyEsCzx .modal-body img {
-  border-radius: 10rem;
 }
 .cid-uNyjyEsCzx H3 {
   text-align: center;
@@ -2315,7 +2355,7 @@ a {
   opacity: 0;
 }
 .cid-uNyH2KyGWY .modal-content {
-  border-radius: 10;
+  border-radius: 10rem;
   border: none;
   background: transparent;
 }
@@ -2762,9 +2802,6 @@ a {
 .cid-uNyL3WkZKU .carousel-item,
 .cid-uNyL3WkZKU .modal-dialog {
   transition: all 0.2s ease;
-}
-.cid-uNyL3WkZKU .modal-body img {
-  border-radius: 10rem;
 }
 .cid-uNyL3WkZKU H3 {
   text-align: center;
@@ -3481,7 +3518,7 @@ a {
   color: #232323;
 }
 .cid-uE7CoExM6n {
-  background-image: url("../../../assets/images/bg.001.png-1-2000x1125.png");
+  background-image: url("../../../assets/images/flat-lay-film-camera-isolated-on-white-background-2025-02-22-09-31-49-utc.jpeg");
 }
 .cid-uE7CoExM6n .mbr-fallback-image.disabled {
   display: none;
@@ -3494,9 +3531,6 @@ a {
   height: 100%;
   position: absolute;
   top: 0;
-}
-.cid-uE7CoExM6n .mbr-section-title {
-  text-align: center;
 }
 .cid-uE7CoExM6n .item-wrapper img {
   width: 100% !important;
